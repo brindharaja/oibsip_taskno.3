@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css"> 
+    <title>Temperature_converter</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>
+            CELCIUS TO FAHRENHEIT
+        </h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="CELCIUS">
+        </div>
+        <div>
+            <button type="submit" onclick="convert()">CONVERT TO FAHRENHEIT</button>
+        </div>
+        <div id="result"></div>
+            <script>
+                function convert(){
+              let celcius=Number(document.getElementById("input").value)
+              let fahrenheit=celcius*(9/5)+32
+              let result=document.getElementById("result")
+              result.innerHTML = fahrenheit.toFixed(3) + " Degree"  }
+            </script>
+        </div>
+    </div>
+</body>
+</html>
